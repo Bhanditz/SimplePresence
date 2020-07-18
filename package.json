@@ -21,7 +21,9 @@
     "lastfm": "electron scripts/lastfm/main.js",
     "imdb": "electron scripts/imdb/main.js",
     "youtube": "electron scripts/youtube/main.js",
-    "foobar": "electron scripts/foobar/main.js"
+    "foobar": "electron scripts/foobar/main.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@dnode/parse-duration": "^1.4.2",
@@ -34,7 +36,8 @@
     "open": "0.0.5",
     "osascript-promise": "^1.0.0",
     "parse-duration": "^0.1.1",
-    "snekfetch": "^3.5.8"
+    "snekfetch": "^3.5.8",
+    "snyk": "^1.362.1"
   },
   "browser": {
     "net": false,
@@ -42,5 +45,6 @@
     "uws": false,
     "erlpack": false,
     "src/transports/IPC.js": false
-  }
+  },
+  "snyk": true
 }
